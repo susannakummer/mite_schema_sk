@@ -183,7 +183,7 @@
         },
         "taxid": {
           "$ref": "#/$defs/taxid"
-                  }
+        }
       }
     },
     "reactions": {
