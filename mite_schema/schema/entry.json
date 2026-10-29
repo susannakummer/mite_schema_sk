@@ -180,7 +180,10 @@
           },
           "minItems": 1,
           "uniqueItems": true
-        }
+        },
+        "taxid": {
+          "$ref": "#/$defs/taxid"
+                  }
       }
     },
     "reactions": {
@@ -446,6 +449,11 @@
         "Sulfonation",
         "Other"
       ]
+    },
+    "taxid": {
+      "title": "Taxonomy ID",
+      "type": "string",
+      "pattern": "^(\\d+)$"
     }
   }
 }

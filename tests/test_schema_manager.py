@@ -37,3 +37,8 @@ def test_validate_mite_invalid(manager):
     outdict = manager.read_json("tests/example_files/example_invalid.json")
     with pytest.raises(ValueError):
         manager.validate_mite(instance=outdict)
+
+def test_validate_mite_invalid_taxid(manager):
+    outdict = manager.read_json("tests/example_files/example_invalid.json")
+    with pytest.raises(ValueError, match="efgh"):
+        manager.validate_mite(instance=outdict)
